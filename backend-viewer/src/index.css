@@ -1,0 +1,11 @@
+@import "tailwindcss";
+@theme { --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif; --font-mono: "JetBrains Mono", ui-monospace, monospace; }
+@layer base {
+  body { @apply bg-slate-50 text-slate-800 font-sans antialiased; }
+  button:not(:disabled) { cursor: pointer; }
+  :focus-visible { outline: 3px solid #16a34a; outline-offset: 2px; border-radius: 6px; }
+}
+@keyframes flash-in { from { background-color: #dcfce7; } to { background-color: transparent; } }
+.row-flash { animation: flash-in 2.2s ease-out; }
+@keyframes slide-in { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
+.feed-in { animation: slide-in 0.35s ease-out; }
